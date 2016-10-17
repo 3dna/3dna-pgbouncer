@@ -125,6 +125,13 @@ max_client_conn = <%= @max_client_conn %>
 ; max clients you want to handle at any moment
 default_pool_size = <%= @default_pool_size %>
 
+;; Minimum number of server connections to keep in pool.
+<%- if @min_pool_size -%>
+min_pool_size = <%= @min_pool_size %>
+<%- else -%>
+;min_pool_size = 0
+<%- end -%>
+
 ; how many additional connection to allow in case of trouble
 <%- if @reserve_pool_size -%>
 reserve_pool_size = <%= @reserve_pool_size %>

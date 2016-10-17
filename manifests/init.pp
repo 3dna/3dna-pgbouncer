@@ -29,6 +29,7 @@ class pgbouncer (
   $server_check_delay        = undef,
   $max_client_conn           = 100,
   $default_pool_size         = 20,
+  $min_pool_size             = undef,
   $reserve_pool_size         = undef,
   $reserve_pool_timeout      = undef,
   $log_connections           = undef,
