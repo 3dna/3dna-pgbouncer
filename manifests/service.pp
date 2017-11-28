@@ -10,5 +10,6 @@ class pgbouncer::service inherits pgbouncer {
     enable     => true,
     hasstatus  => true,
     hasrestart => true,
+    restart    => "/usr/sbin/service ${::pgbouncer::service_name} reload",
   }
 }
